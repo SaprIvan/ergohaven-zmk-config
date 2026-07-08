@@ -62,6 +62,13 @@
             bindings = <&kp RU_CYRILLIC_SOFT_SIGN>, <&kp RU_CYRILLIC_HARD_SIGN>;
         };
 
+        shsch_danse: shsch_danse {
+            compatible = "zmk,behavior-tap-dance";
+            label = "SHSCH_DANSE";
+            #binding-cells = <0>;
+            bindings = <&kp RU_CYRILLIC_SHA>, <&kp RU_CYRILLIC_SHCHA>;
+        };
+
         zip_auto_mouse: zip_auto_mouse {
             compatible = "zmk,input-processor-temp-layer";
             #input-processor-cells = <2>;
@@ -172,10 +179,10 @@
         ru {
             display-name = "Ru";
             bindings = <
-&kp ESC    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                           &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE  &kp RU_CYRILLIC_SHA  &kp RU_CYRILLIC_SHCHA  &hz_dance            &kp BSPC
-&trans     &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                          &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O    &kp RU_CYRILLIC_EL   &kp RU_CYRILLIC_DE     &kp RU_CYRILLIC_ZHE  &trans
-&kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                                           &kp RU_CYRILLIC_TE  &soft_hard_dance     &kp RU_CYRILLIC_BE   &kp RU_CYRILLIC_YU     &kp RU_CYRILLIC_E    &tog 2
-                                    &trans                &kp LGUI            &kp LCTRL           &trans                             &kp LEFT_ALT    &kp RET  &mo 4               &cap_sen 6 MB1       &kp RU_COMMA         &kp RU_DOT
+&kp ESC    &kp RU_CYRILLIC_SHORT_I  &kp RU_CYRILLIC_TSE   &kp RU_CYRILLIC_U   &kp RU_CYRILLIC_KA  &mt RU_CYRILLIC_IO RU_CYRILLIC_IE                           &kp RU_CYRILLIC_EN  &kp RU_CYRILLIC_GHE  &shsch_danse        &kp RU_CYRILLIC_ZE  &kp RU_CYRILLIC_HA   &kp BSPC
+&trans     &kp RU_CYRILLIC_EF       &kp RU_CYRILLIC_YERU  &kp RU_CYRILLIC_VE  &kp RU_CYRILLIC_A   &kp RU_CYRILLIC_PE                                          &kp RU_CYRILLIC_ER  &kp RU_CYRILLIC_O    &kp RU_CYRILLIC_EL  &kp RU_CYRILLIC_DE  &kp RU_CYRILLIC_ZHE  &trans
+&kp LSHFT  &kp RU_CYRILLIC_YA       &kp RU_CYRILLIC_CHE   &kp RU_CYRILLIC_ES  &kp RU_CYRILLIC_EM  &kp RU_CYRILLIC_I                                           &kp RU_CYRILLIC_TE  &soft_hard_dance     &kp RU_CYRILLIC_BE  &kp RU_CYRILLIC_YU  &kp RU_CYRILLIC_E    &tog 2
+                                    &trans                &kp LGUI            &kp LCTRL           &trans                             &kp LEFT_ALT    &kp RET  &mo 4               &cap_sen 6 MB1       &kp RU_COMMA        &kp RU_DOT
             >;
         };
 
@@ -193,7 +200,7 @@
         sym_en {
             bindings = <
 &kp GRAVE  &kp HASH   &kp LT    &kp EQUAL              &kp GT     &kp GRAVE                    &kp CARET  &kp DQT   &kp MINUS  &kp SQT   &trans    &trans
-&kp CAPS   &kp BSLH   &kp LPAR  &kp RIGHT_PARENTHESIS  &en COLON  &kp PLUS                     &kp PRCNT  &kp LBRC  &kp SEMI   &en RBRC  &kp EXCL  &kp QUESTION
+&kp CAPS   &kp BSLH   &kp LPAR  &kp RIGHT_PARENTHESIS  &en COLON  &kp PLUS                     &kp PRCNT  &kp LBRC  &kp SEMI   &kp RBRC  &kp EXCL  &kp QUESTION
 &trans     &kp COMMA  &kp STAR  &kp UNDER              &kp FSLH   &kp DLLR                     &kp AT     &kp PIPE  &kp TILDE  &kp AMPS  &kp DOT   &trans
                       &trans    &trans                 &trans     &mo 5      &trans    &trans  &trans     &trans    &kp LBKT   &kp RBKT
             >;
